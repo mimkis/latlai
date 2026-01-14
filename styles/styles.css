@@ -1,0 +1,584 @@
+/*---------- fonts -----------*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+/* .roboto-mono-regular {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-mono-light {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+} */
+
+@font-face {
+  font-family: "Latilai Hoi";
+     src: url("../fonts/Latilai-Hoi-Final-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Latilai Sac";
+     src: url("../fonts/Latilai-Sac-Final-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Latilai Huyen";
+     src: url("../fonts/Latilai-Huyen-Final-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Latilai Nga";
+     src: url("../fonts/Latilai-Nga-Final-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Latilai Nang";
+     src: url("../fonts/Latilai-Nang-Final-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Latilai Regular";
+     src: url("../fonts/Latilai-Regular-Final-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lunchtype22 Light";
+     src: url("../fonts/Lunchtype22-Light.ttf") format("ttf");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lunchtype22 Regular";
+     src: url("../fonts/Lunchtype22-Regular.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lunchtype22 Medium";
+     src: url("../fonts/Lunchtype22-Medium.ttf") format("ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+
+/*----------general-----------*/
+* {
+  box-sizing: border-box ;
+  scroll-behavior: smooth;
+  cursor: var(--cursor, auto);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+:root {
+  font-size: 16px;
+  --Maze: #ffc9a8;
+  --Corn: #fcd878;
+  --orange: #f09a51;
+  --powder-pink: #ffd2ed;
+  --dark-orange: #5d1600;
+  --burnt-orange: #421e1d;
+  --reddish-pink: #d83b46;
+
+  --pink: #ed8cc8;
+  --pink-30: #ed8cc820;
+
+  --lavender: #ac91de;
+  --dark-blue: #052630;
+  --dark-blue: #052630;
+  --ocean-blue: #005884;
+  --sky: #b8e0f8;
+  --grass: #79b74a;
+  --forrest: #486f43;
+  --deep-forrest: #141C10;
+  --white: #ffffff;
+}
+
+body {
+  font-weight: 300;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  margin:0;
+  padding:0;
+  cursor: var(--cursor);
+  font-family: "Roboto Mono", monospace;
+  background-image: repeating-linear-gradient(
+  90deg,
+  var(--powder-pink) 0,
+  var(--powder-pink) 99px,
+  var(--pink-30) 99px,
+  var(--pink-30) 100px
+  );
+}
+
+html {
+  cursor: var(--cursor, auto);
+}
+
+/*---------- background & header -----------*/
+
+/* .parent {
+display: grid;
+grid-template-columns: 1fr;
+grid-template-rows: 40px 1fr 40px;
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+} */
+
+.band {
+  position: fixed;
+  bottom: 0;
+  background-color: var(--pink);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  padding: 1.1rem;
+  height: 1.2rem;
+  width: 100vw;
+  font-size: 0.75rem;
+  transition: 
+  background-color 0.1s ease, 
+  letter-spacing 0.1s ease;
+}
+
+.band:hover {
+  background-color: var(--reddish-pink);
+  letter-spacing: 0.2rem;
+  font-weight: 400;
+}
+
+.band:active {
+  background-color: var(--powder-pink);
+}
+
+.band-link, .band-link a , .band-link a:visited {
+  font-weight: 300;
+  color: var(--white);
+  text-decoration: none;
+}
+
+.header-bar {
+  flex: 1;
+  position: sticky;
+  z-index: 1000;
+  left: 0;
+  width: 100vw;
+  height: 40px;
+  padding: 1.1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header-item {
+  font-family: "Roboto Mono", monospace;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1.03rem;
+  color: var(--dark-orange);
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.r1 {flex: 10; display: flex; align-items: center;} 
+.r2 {
+  flex: 1; 
+  display:flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 15px;} 
+
+.r2:hover{
+  color: var(--reddish-pink);
+  font-family: "Latilai regular", "Roboto Mono", monospace;
+  font-size: 1.75rem;
+  align-items: end;
+  transform: translateY(33px) translateX(20px);
+}
+
+.r1:hover{
+  color: var(--reddish-pink);
+  font-family: "Latilai regular", "Roboto Mono", monospace;
+  font-size: 1.75rem;
+  align-items: end;
+  transform: translateY(33px) translateX(-20px);
+}
+
+.header-item .bracket {
+  opacity: 1;
+}
+
+.header-item:hover .bracket {
+  opacity: 0;
+}
+
+/*---------- flipping ---------- */
+
+.flipcontainer {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  transform: translate(-50%, -50%) scale(5.2) ;
+}
+
+.thecard {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease;
+}
+
+.flipcontainer:hover .thecard {
+  transform: rotateY(180deg);
+}
+
+.thefront,
+.theback {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+}
+
+.theback {
+  transform: rotateY(180deg);
+}
+
+.latlai {
+  width: 100%;
+  height: 100%;
+  display: block;
+  --lat-scale: 1.25;
+  transform-origin: center;
+}
+/*---------- parralax -----------*/
+
+.parralax-layer {
+  margin-top: 10vh;
+  pointer-events: none;
+}
+
+.parralax-item {
+  position: absolute;
+  pointer-events: auto;
+}
+
+.parralax-element {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform-origin: center;
+  transform: translate(-50%, -50%) scale(1.535);
+  transition: transform 0.25s ease;
+}
+
+.parralax-item .tooltip {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, -110%);
+  font-size: 0.5rem;
+  /* padding: 2px 4px; */
+  border-radius: 1px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.12s ease;
+  pointer-events: none;
+}
+
+#sac .tooltip {
+  background: var(--lavender);
+  color: #fff;
+}
+
+#hoi .tooltip {
+  background: var(--grass);
+  color: #fff;
+}
+
+#nang .tooltip {
+  background: var(--orange);
+  color: #fff;
+}
+
+#nga .tooltip {
+  background: var(--pink);
+  color: #fff;
+}
+
+#huyen .tooltip {
+  background: var(--reddish-pink);
+  color: #fff;
+}
+
+.parralax-item:hover .tooltip {
+  opacity: 1;
+}
+
+.parralax-element {
+  --px: 0px;
+  --py: 0px;
+  --hover-scale: 1;
+  --hover-rotate: 0deg;
+
+  transform:
+    translate(-50%, -50%)
+    scale(0.135)
+    translate(var(--px), var(--py))
+    scale(var(--hover-scale))
+    rotate(var(--hover-rotate));
+
+  transition:
+    scale 0.25s ease,
+    transform 0.25s ease;
+}
+
+/* apply latlai-specific scale without losing the shared translate */
+.parralax-element.latlai {
+  /* disable parallax transforms for the main flipping element so
+     the flip container controls positioning and scale */
+  position: static !important;
+  left: auto !important;
+  top: auto !important;
+  transform: none !important;
+  transform-origin: center;
+  transition: transform 0.25s ease;
+  display: block;
+  width: 100%;
+  height: auto;
+  pointer-events: auto;
+}
+
+/*---------- hover effect -----------*/
+@keyframes hoverWiggleLoop {
+  0%   { transform: translate(-50%, -50%) scale(0.145) rotate(0deg); }
+  25%  { transform: translate(-50%, -50%) scale(0.15)  rotate(-2deg); }
+  50%  { transform: translate(-50%, -50%) scale(0.155) rotate(2deg); }
+  75%  { transform: translate(-50%, -50%) scale(0.15)  rotate(-1.5deg); }
+  100% { transform: translate(-50%, -50%) scale(0.145) rotate(0deg); }
+}
+
+
+.parralax-item:not(#latlai):hover .parralax-element {
+  animation: hoverWiggleLoop 0.5s ease-in-out infinite;
+  animation-timing-function: cubic-bezier(.45, .05, .55, .95);
+
+}
+
+
+/*----------POS elements----------*/
+
+#latlai {
+  left: 50%;
+  top: 50%;
+  /* control the entire flipping structure via these CSS variables:
+     --flip-scale: scale of the whole card
+     --flip-x / --flip-y: position offsets (rem/vh)*/
+  --flip-scale: 2.2;
+  --flip-x: 0.2rem;
+  --flip-y: 1.71rem;
+  transform: translate(-50%, -50%) translate(var(--flip-x, 0rem), var(--flip-y, 0rem)) scale(var(--flip-scale, 1.35));
+}
+
+#sac {
+  left: 50%;
+  top: 50%;
+  transform: scale(1.35) translate(-50%, -50%) translate(16rem, 9rem);
+}
+
+#nang {
+  left: 50%;
+  top: 50%;
+  transform: scale(1.435) translate(-50%, -50%) translate(-6vh, -24vh);
+}
+
+#hoi {
+  left: 50%;
+  top: 50%;
+  transform: scale(1.35) translate(-50%, -50%) translate(13rem, -6rem);
+}
+
+#huyen {
+  left: 50%;
+  top: 50%;
+  transform: scale(1.35) translate(-50%, -50%) translate(-16rem, -4rem);
+}
+
+#nga {
+  left: 50%;
+  top: 50%;
+  transform: scale(1.35) translate(-50%, -50%) translate(-28vh, 18vh);
+}
+
+/*---------- overlay -----------*/
+
+.start-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--reddish-pink);
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 8rem;
+  font-family: "Roboto Mono", monospace;
+  font-size: .9rem;
+  z-index: 3000;
+  transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.start-overlay.is-hidden {
+  transform: translateY(-100%);
+}
+
+.overlay-text {
+  max-width: 550px;
+  min-width: 200px;
+}
+
+.overlay {
+  position: fixed; 
+  display: none; 
+  width: 100vw;
+  height: 100vh; 
+  inset: 0;
+  background-color: rgba(73, 9, 50, 0.094); 
+  z-index: 2000;
+  justify-content: center; 
+  align-items: center;
+}
+
+.overlay-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: .65rem;
+  max-width: 550px;
+  padding: 1.75rem 2rem 2rem 2rem;
+  box-sizing: border-box;
+  border-radius: 0.75rem;
+
+  position: relative;
+}
+
+.overlay-about, .overlay-credits {
+  border: 4.5px solid var(--reddish-pink);
+  background-color: var(--powder-pink);
+  color: var(--dark-orange);
+}
+
+/* .overlay-about, .overlay-credits {
+  border: 4.5px solid var(--powder-pink);
+  background-color: var(--reddish-pink);
+  color: var(--white);
+} */
+
+.overlay-credits {
+  padding: 3.85rem 2rem 2.65rem 2rem;
+}
+
+.overlay-close-button {
+  position: absolute;
+  top: .85rem;
+  right: .85rem;
+}
+
+.overlay-close-button:hover{
+  transform-origin: 50% 50%; 
+  transform: scale(1.15);
+  transition: transform 0.2s ease;
+}
+
+.overlay-skillsets {
+  font-style: italic;
+  font-weight: 400;
+}
+
+.overlay-link, .overlay-link a , .overlay-link a:visited {
+  font-weight: 400;
+  color: var(--dark-orange);
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 2px;
+}
+
+/*---------- media queries ----------*/
+/*----------- Media queries -----------------*/
+
+
+@media screen and (orientation: portrait) {
+  body::before {
+    content:
+      "Sorry guys, this experience only supports landscape\A\A (‘. • ᵕ •. `)\A\APlease rotate your device!";
+    position: fixed;
+    inset: 0;
+    background: var(--reddish-pink);
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    font-size: 0.9rem;
+    text-align: center;
+    font-weight: 300;
+    z-index: 9999;
+    margin: auto;
+    white-space: pre-line;
+  }
+}
+
+/*---------- floating ----------- */
+
+.float-wrapper { animation: none; }
+
+@keyframes floatTop {
+  0% { top: calc(50% - 0.2rem); }
+  50% { top: calc(50% + 0.2rem); }
+  100% { top: calc(50% - 0.2rem); }
+}
+
+/* apply the float animation to all items, then give each item its own timing to desynchronize */
+.parralax-item:not(#latlai) .parralax-element {
+  animation-name: floatTop;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+
+/* different durations and delays for each */
+#latlai .parralax-element { animation-duration: 6s;  animation-delay: 0s;   }
+#sac   .parralax-element { animation-duration: 4.8s; animation-delay: -1.2s; }
+#huyen .parralax-element { animation-duration: 5.2s; animation-delay: -2.3s; }
+#hoi   .parralax-element { animation-duration: 4.4s; animation-delay: -0.7s; }
+#nga   .parralax-element { animation-duration: 5.6s; animation-delay: -1.9s; }
+#nang  .parralax-element { animation-duration: 4.2s; animation-delay: -2.8s; }

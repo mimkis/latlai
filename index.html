@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lật lại</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon1.ico">
+    <link rel="stylesheet" href="styles/styles.css"/>
+  </head>
+  <body>
+    <!--start overlay-->
+    <!-- <div class="start-overlay">
+      <img style="height: 50px;" src="assets/overlay-icon.svg">
+      <p class="overlay-text">
+        <br>
+        [Lật Lại] is a playground for Lục Bát.
+      <br><br>
+      &#42;
+      <br><br>
+      This website lets you click, mix, and turn the rules of bằng–trắc—
+      from words to shapes, and shapes back to words.
+      <br><br>
+      &#42;
+      <br><br>
+      There's no right way to start.
+      Just try something and see what happens.
+      </p>
+    </div> -->
+
+    <!--header overlay-->
+    <div class="overlay about" onClick="off()">
+      <div class="overlay-content overlay-about">
+        <p style="
+        font-size: 1.2rem;
+        font-weight: 400;
+        line-height: 0.15rem;;
+        ">What is [Lật lại]?</p>
+        <p>***<br><br>
+          Lật Lại is a cross-platform project that revisits Lục Bát as a living system rather than a fixed poetic form. 
+          This website functions as the interactive extension of the project. Building on the physical zine and type specimen, the web tool allows users to engage directly with the rules of bằng–trắc through generative interactions. Users can compose Lục Bát by selecting words based on tone, or by assembling tonal shapes that later generate language.
+        </p>
+        <div class="overlay-close-button">
+          <img src="assets/overlay-close-button.svg">
+        </div>
+      </div>
+    </div>
+    <div class="overlay credits" onClick="off()">
+      <div class="overlay-content overlay-credits">
+        <p>
+          Mickiliin (Le My Linh) is a young creative practicioner based in Ho Chi Minh City, Vietnam.
+          Her skillsets focus on <span class="overlay-skillsets">[Editorial design]</span>, <span class="overlay-skillsets">[Interaction design]</span>, <span class="overlay-skillsets">[Motion design]</span> and newest to the collection, <span class="overlay-skillsets">[Type design]</span>.
+          <br><br>&#42;&#42;&#42;<br><br>
+          For browsing more of her works: <span class="overlay-link"><a href="https://www.behance.net/mickiliinstudio">Mickiliin @ Behance</a></span>
+          <br>
+          For reaching out & having a conversation: <span class="overlay-link"><a href="https://www.instagram.com/mimkilii_iii/">@mimkilii_iii</a></span>
+        </p>
+        <div class="overlay-close-button">
+          <img src="assets/overlay-close-button.svg">
+        </div>
+      </div>
+    </div>
+
+    <div class="parent">
+      <div class="header-bar">
+       <div class="header-item r1" onClick="onHome()">
+          <a href="index.html">
+            <span class="bracket">[</span>
+            <span class="label">Lật lại</span>
+            <span class="bracket">]</span>
+          </a>
+        </div>
+        <div class="header-item r2" onClick="onAbout()">
+          <span class="bracket">[</span>
+          <span class="label">about</span>
+          <span class="bracket">]</span>
+        </div>
+        <div class="header-item r2" onClick="onCredits()">
+          <span class="bracket">[</span>
+          <span class="label">credits</span>
+          <span class="bracket">]</span>
+        </div>
+      </div>
+      <div class="parralax-wrap">
+        <div  class="parralax-layer">
+          <div class="parralax-item flipcontainer" id="latlai" data-depth=".3">
+            <div class="thecard">
+              <div class="thefront">
+                <img class="parralax-element latlai front" src="assets/mainpage/latlai-front.svg" alt="latlai">
+              </div>
+              <div class="theback">
+                <img class="parralax-element latlai back" src="assets/mainpage/latlai-back2.svg" alt="latlai">
+              </div>
+            </div>
+          </div>
+          <div class="float-wrapper">
+            <div class="parralax-item" id="sac" data-depth="4.75">
+              <img class="parralax-element" src="assets/mainpage/sac.svg" alt="sac" />
+              <div class="tooltip">&#91;Trắc&#93;</div>
+            </div>
+          </div>
+          <div class="float-wrapper">
+            <div class="parralax-item" id="huyen" data-depth="5.6">
+              <img class="parralax-element" src="assets/mainpage/huyen.svg" alt="huyen" />
+              <div class="tooltip">&#91;Bằng&#93;</div>
+            </div>
+          </div>
+          <div class="float-wrapper">
+            <div class="parralax-item" id="hoi" data-depth="3.3">
+              <img class="parralax-element" src="assets/mainpage/hoi.svg" alt="hoi" />
+              <div class="tooltip">&#91;Trắc&#93;</div>
+            </div>
+          </div>
+          <div class="float-wrapper">
+            <div class="parralax-item" id="nga" data-depth="4.9">
+              <img class="parralax-element" src="assets/mainpage/nga.svg" alt="nga" />
+              <div class="tooltip">&#91;Trắc&#93;</div>
+            </div>
+          </div>
+          <div class="float-wrapper">
+            <div class="parralax-item" id="nang" data-depth="4.45">
+              <img class="parralax-element" src="assets/mainpage/nang.svg" alt="nang" />
+              <div class="tooltip">&#91;Trắc&#93;</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <a class="band-link" href="toolbox.html">
+          <div class="band">
+            [click to play]
+          </div>
+        </a>
+      </div>
+      
+      
+    </div>
+
+    <script src="script/cursor.js"></script>
+    <script src="script/parralax.js"></script>
+    <script src="script/overlay-header.js"></script>
+    <script>
+      //overlay hide on click
+      const overlay = document.querySelector('.start-overlay');
+
+      overlay.addEventListener('click', () => {
+        overlay.classList.add('is-hidden');
+      });
+
+    </script>
+  </body>
+</html>

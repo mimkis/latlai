@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lật lại</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon1.ico">
+    <link rel="stylesheet" href="styles/styles.css"/>
+  </head>
+  <body>
+    
+    <!--header overlay-->
+    <div class="overlay about" onClick="off()">
+      <div class="overlay-content overlay-about">
+        <p style="
+        font-size: 1.2rem;
+        font-weight: 400;
+        line-height: 0.15rem;;
+        ">What is [Lật lại]?</p>
+        <p>***<br><br>
+          Lật Lại is a cross-platform project that revisits Lục Bát as a living system rather than a fixed poetic form. 
+          This website functions as the interactive extension of the project. Building on the physical zine and type specimen, the web tool allows users to engage directly with the rules of bằng–trắc through generative interactions. Users can compose Lục Bát by selecting words based on tone, or by assembling tonal shapes that later generate language.
+        </p>
+        <div class="overlay-close-button">
+          <img src="assets/overlay-close-button.svg">
+        </div>
+      </div>
+    </div>
+    <div class="overlay credits" onClick="off()">
+      <div class="overlay-content overlay-credits">
+        <p>
+          Mickiliin (Le My Linh) is a young creative practicioner based in Ho Chi Minh City, Vietnam.
+          Her skillsets focus on <span class="overlay-skillsets">[Editorial design]</span>, <span class="overlay-skillsets">[Interaction design]</span>, <span class="overlay-skillsets">[Motion design]</span> and newest to the collection, <span class="overlay-skillsets">[Type design]</span>.
+          <br><br>&#42;&#42;&#42;<br><br>
+          For browsing more of her works: <span class="overlay-link"><a href="https://www.behance.net/mickiliinstudio">Mickiliin @ Behance</a></span>
+          <br>
+          For reaching out & having a conversation: <span class="overlay-link"><a href="https://www.instagram.com/mimkilii_iii/">@mimkilii_iii</a></span>
+        </p>
+        <div class="overlay-close-button">
+          <img src="assets/overlay-close-button.svg">
+        </div>
+      </div>
+    </div>
+
+    <div class="parent">
+      <div class="header-bar">
+        <div class="header-item r1" onClick="onHome()">
+          <a href="index.html">
+            <span class="bracket">[</span>
+            <span class="label">Lật lại</span>
+            <span class="bracket">]</span>
+          </a>
+        </div>
+        <div class="header-item r2" onClick="onAbout()">
+          <span class="bracket">[</span>
+          <span class="label">about</span>
+          <span class="bracket">]</span>
+        </div>
+        <div class="header-item r2" onClick="onCredits()">
+          <span class="bracket">[</span>
+          <span class="label">credits</span>
+          <span class="bracket">]</span>
+        </div>
+      </div>
+      
+    </div>
+
+    <script src="script/cursor.js"></script>
+    <script src="script/overlay-header.js"></script>
+    <script>
+      //overlay hide on click
+      const overlay = document.querySelector('.start-overlay');
+
+      overlay.addEventListener('click', () => {
+        overlay.classList.add('is-hidden');
+      });
+
+    </script>
+  </body>
+</html>
