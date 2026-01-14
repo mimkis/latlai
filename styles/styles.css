@@ -538,7 +538,7 @@ grid-row-gap: 0px;
 @media screen and (orientation: portrait) {
   body::before {
     content:
-      "Sorry guys, this experience only supports landscape\A\A (‘. • ᵕ •. `)\A\APlease rotate your device!";
+      "Sorry guys, this experience only supports landscape\A\A (‘. • ᵕ •. `)\A\APlease get your laptops!";
     position: fixed;
     inset: 0;
     background: var(--reddish-pink);
