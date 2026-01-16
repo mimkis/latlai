@@ -65,6 +65,71 @@
       
     </div>
 
+    <!--delete later-->
+    <div style="
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        position: absolute;
+        inset: 0;
+        background-color: var(--dark-orange);
+        color: var(--powder-pink);
+        z-index: 9999;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;">
+          <p style="max-width: 300px;">Site is under construction, thank you for your patience.</p>
+          <div id="black" style="position: absolute; inset: 0; width: 100vw; height: 100vh; overflow: hidden;">
+            <img id="bounce-img" src="assets/cow.jpg" alt="Moo" style="position: absolute; width: 150px;"> 
+          </div>
+        </div>
+        
+    
+        <script>
+          let x = 5, y = 5; // Start slightly away from 0
+          let dirX = 1, dirY = 1;
+          const speed = 0.5;
+          const dvd = document.getElementById("bounce-img");
+    
+          function animate() {
+            const screenHeight = window.innerHeight;
+            const screenWidth = window.innerWidth;
+            const dvdWidth = dvd.clientWidth;
+            const dvdHeight = dvd.clientHeight;
+    
+            // Vertical bounce logic
+            if (y + dvdHeight >= screenHeight) {
+              dirY = -1;
+              y = screenHeight - dvdHeight; // Reset to edge
+            } else if (y < 0) {
+              dirY = 1;
+              y = 0; // Reset to edge
+            }
+    
+            // Horizontal bounce logic
+            if (x + dvdWidth >= screenWidth) {
+              dirX = -1;
+              x = screenWidth - dvdWidth; // Reset to edge
+            } else if (x < 0) {
+              dirX = 1;
+              x = 0; // Reset to edge
+            }
+    
+            x += dirX * speed;
+            y += dirY * speed;
+            
+            dvd.style.left = x + "px";
+            dvd.style.top = y + "px";
+            
+            window.requestAnimationFrame(animate);
+          }
+    
+          // Start animation
+          window.requestAnimationFrame(animate);
+        </script>
+    <!--delete later-->
+
     <script src="script/cursor.js"></script>
     <script src="script/overlay-header.js"></script>
     <script>
