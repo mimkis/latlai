@@ -1,0 +1,572 @@
+/*---------- fonts -----------*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+/* .roboto-mono-regular {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-mono-light {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+} */
+
+@font-face {
+  font-family: "Latilai Hoi";
+     src: url("../fonts/Latilai-Hoi-Final-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Latilai Sac";
+     src: url("../fonts/Latilai-Sac-Final-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Latilai Huyen";
+     src: url("../fonts/Latilai-Huyen-Final-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Latilai Nga";
+     src: url("../fonts/Latilai-Nga-Final-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Latilai Nang";
+     src: url("../fonts/Latilai-Nang-Final-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Latilai Regular";
+     src: url("../fonts/Latilai-Regular-Final-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lunchtype22 Light";
+     src: url("../fonts/Lunchtype22-Light.ttf") format("ttf");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lunchtype22 Regular";
+     src: url("../fonts/Lunchtype22-Regular.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lunchtype22 Medium";
+     src: url("../fonts/Lunchtype22-Medium.ttf") format("ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+
+/*----------general-----------*/
+* {
+  box-sizing: border-box ;
+  scroll-behavior: smooth;
+  cursor: var(--cursor, auto);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+:root {
+  font-size: 16px;
+  --Maze: #ffc9a8;
+  --Corn: #fcd878;
+  --orange: #f09a51;
+  --powder-pink: #ffd2ed;
+  --dark-orange: #5d1600;
+  --burnt-orange: #421e1d;
+  --reddish-pink: #d83b46;
+  --pink: #ed8cc8;
+  --lavender: #ac91de;
+  --dark-blue: #052630;
+  --dark-blue: #052630;
+  --ocean-blue: #005884;
+  --sky: #b8e0f8;
+  --grass: #79b74a;
+  --forrest: #486f43;
+  --deep-forrest: #141C10;
+  --white: #ffffff;
+  --current-background: var(--powder-pink);
+  --current-accent: var(--dark-orange);
+}
+
+body {
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  background-color: var(--current-background);
+  font-weight: 300;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  margin:0;
+  padding:0;
+  cursor: var(--cursor);
+  font-family: "Roboto Mono", monospace;
+}
+
+html {
+  cursor: var(--cursor, auto);
+}
+
+/*---------- background & header -----------*/
+
+#mode-indicator {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  background-color: transparent;
+  color: var(--current-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 300;
+  z-index: 1500;
+  letter-spacing: 1px;
+}
+
+/*--------- body ----------*/
+.parent {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 40px 1fr 80px;
+}
+
+/*------------- visual block ----------------*/
+/*------------- default state ----------------*/
+/*------------- visual block ----------------*/
+/*------------- default state ----------------*/
+
+.visual-stage {
+  -webkit-user-select: none; 
+  -moz-user-select: none; 
+  -ms-user-select: none;    
+  user-select: none; 
+}
+
+.visual-block {
+  color: var(--current-accent);
+}
+
+.parent,
+.poem-container,
+.visual-block {
+  pointer-events: auto;
+}
+
+.poem-container {
+  height: 65px;
+  width: fit-content;
+  display: flex;
+  overflow: visible;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  gap: 0;
+}
+
+.poem-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: auto;
+}
+
+.poem-block:active {
+  cursor: grabbing;
+}
+
+.poem-item {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 10px;
+}
+
+/*------------- icon-layout custome ----------------*/
+/*------------- icon-layout custome----------------*/
+/*------------- icon-layout custome----------------*/
+/*------------- icon-layout custome ----------------*/
+
+.icon-switch, .icons, .icontoggle {
+  display: flex;
+  width: fit-content;
+  height: fit-content;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+  border-radius: 50px;
+}
+
+.icon-switch:active , .icons:active, .icontoggle:active{
+  background-color: color-mix(
+  in oklch,
+  var(--current-accent) 30%,
+  transparent
+);}
+
+.icon-switch.is-active {
+  background-color: var(--current-accent);
+}
+
+.icon-switch.is-active .icons {
+  color: color-mix(
+    in oklch,
+    var(--current-background) 70%,
+    var(--current-accent)
+  );
+}
+
+
+
+
+/*---- algin each-------*/
+/* nặng */
+.align-top {
+  transform: translateY(18%) ; 
+}
+
+/* sắc & hỏi */
+.align-bottom {
+  transform: translateY(-18%);
+}
+
+.align-bottom2 {
+  transform: translateY(-17.6%);
+}
+
+/* Ngã doen */
+.align-float {
+  transform: translateY(30%);
+}
+
+/*----cau 6 cau 8----*/
+#cau6 {
+  transform: translate(53vh,17vh);
+}
+
+#cau8 {
+  transform: translate(40vh,20vh);
+}
+
+
+.homebtn {
+  position:absolute;
+  left: 25px;
+}
+
+
+/*switcharoo betwwen shape 2 word and word 2 shape*/
+
+.switch-bar {
+  position:absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  right: 25px;
+}
+
+.switch-bar .icons.hidden {
+    display: none; /* Removes from layout */
+}
+
+.switch-bar .icons.active {
+    display: block; /* Shows the active button */
+}
+
+.bottom-bar {
+  padding-left: 50px;
+  padding-right: 50px;
+  display: flex;
+  flex-direction: row;
+  gap: 110px;
+  align-items:center;
+  justify-content: center;
+  padding-bottom: 30px;
+}
+
+.color-customize, 
+.layout-customize {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+    gap: 7px;
+}
+
+
+.icontoggle:hover, .icons:hover {
+  transform: scale(1.05);
+}
+
+.icontoggle {
+  transition: transform 0.25s ease;
+}
+
+.icontoggle.is-active {
+  transform: rotate(90deg);
+  transition: transform 0.25s ease;
+}
+
+.icons:active, .iconstoggle:active {
+  opacity: 0.5 !important;
+}
+
+
+.icons, .icontoggle {
+  width: 50px;
+  height: 50px;
+  color: var(--current-accent);
+}
+
+.icons {
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+
+.icons.is-visible {
+  opacity: 1 !important;
+}
+
+
+
+
+/*---------- overlay -----------*/
+
+.overlay-text {
+  max-width: 550px;
+  min-width: 200px;
+}
+
+.overlay {
+  position: fixed; 
+  display: none; 
+  width: 100vw;
+  height: 100vh; 
+  inset: 0;
+  background-color: rgba(73, 9, 50, 0.094); 
+  z-index: 2000;
+  justify-content: center; 
+  align-items: center;
+}
+
+.overlay-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: .65rem;
+  max-width: 550px;
+  padding: 1.75rem 2rem 2rem 2rem;
+  box-sizing: border-box;
+  border-radius: 0.75rem;
+
+  position: relative;
+}
+
+.overlay-about, .overlay-credits {
+  border: 4.5px solid var(--reddish-pink);
+  background-color: var(--powder-pink);
+  color: var(--dark-orange);
+}
+
+/* .overlay-about, .overlay-credits {
+  border: 4.5px solid var(--powder-pink);
+  background-color: var(--reddish-pink);
+  color: var(--white);
+} */
+
+.overlay-credits {
+  padding: 3.85rem 2rem 2.65rem 2rem;
+}
+
+.overlay-close-button {
+  position: absolute;
+  top: .85rem;
+  right: .85rem;
+}
+
+.overlay-close-button:hover{
+  transform-origin: 50% 50%; 
+  transform: scale(1.15);
+  transition: transform 0.2s ease;
+}
+
+.overlay-skillsets {
+  font-style: italic;
+  font-weight: 400;
+}
+
+.overlay-link, .overlay-link a , .overlay-link a:visited {
+  font-weight: 400;
+  color: var(--dark-orange);
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 2px;
+}
+
+/*---------- media queries ----------*/
+/*----------- Media queries -----------------*/
+
+
+@media screen and (orientation: portrait) {
+  body::before {
+    content:
+      "Sorry guys, this experience only supports landscape\A\A (‘. • ᵕ •. `)\A\APlease rotate your device!";
+    position: fixed;
+    inset: 0;
+    background: var(--reddish-pink);
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    font-size: 0.9rem;
+    text-align: center;
+    font-weight: 300;
+    z-index: 9999;
+    margin: auto;
+    white-space: pre-line;
+  }
+}
+
+/*poem sidebar*/
+.poem-section {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 6px;
+  transition: opacity 0.15s ease;
+}
+
+.poem-section.is-visible {
+  opacity: 0;
+}
+
+.poem-btn {
+  padding: 0;
+  line-height: 0;
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  border: 1.25px solid var(--current-accent);
+  border-radius: 15px;
+  background-color: transparent;
+  transition: all 0.15s ease;
+}
+
+.poem-btn:hover {
+  border: none;
+  background: var(--current-accent);
+}
+
+.poem-btn:active {
+  opacity: 0.6;
+}
+
+.poem-number {
+  color: var(--current-accent);
+  opacity: 0;
+  font-size: 0.75rem;
+  transition: opacity 0.15s ease;
+}
+
+.poem-number.is-visible {
+  opacity: 1;
+}
+
+
+
+
+
+
+/*------- text area styling --------*/
+/* 
+.canvas {
+  position: relative;
+  width: 100%;
+  height: 98%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+#text-editor {
+  text-align: center;
+  background: transparent !important;
+  resize: none;
+  scrollbar-width: none;
+  border: none;
+
+  position: relative;
+  z-index: 2;
+  
+  height: auto;
+  width: 100%;
+
+  text-align: center;
+  color: var(--current-accent);
+  opacity: 1;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 300;
+  font-size: 1.25rem;
+  line-height: 3.8;
+}
+
+#text-editor:focus {
+    outline: none; 
+    box-shadow: none;
+    background: transparent !important;
+}
+
+#text-editor::placeholder {
+  color: var(--current-accent);
+  opacity: 0.4;
+  transition: opacity 0.2s ease;
+}
+
+#text-editor:focus::placeholder {
+  opacity: 0;
+}
+
+#visual-stage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; 
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
